@@ -1,0 +1,209 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: #ffffff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 3em;
+    background-color: #000;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav .search-bar input {
+    padding: 0.5em;
+    border-radius: 3px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+nav ul .profile img {
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+nav ul .profile .dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #333;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+nav ul .profile:hover .dropdown {
+    display: block;
+}
+
+nav ul .profile .dropdown li {
+    padding: 0.5em 1em;
+}
+
+.hero {
+    background-image: url('../assets/images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero .hero-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2em 3em;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+.hero button {
+    padding: 0.8em 1.5em;
+    font-size: 1.2em;
+    color: #ffffff;
+    background-color: #e50914;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero button:hover {
+    background-color: #b0060d;
+}
+
+.featured {
+    padding: 2em 3em;
+}
+
+.featured h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5em;
+}
+
+.featured-grid .movie-card {
+    position: relative;
+    background-color: #333;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.featured-grid .movie-card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s;
+}
+
+.featured-grid .movie-card:hover {
+    transform: scale(1.05);
+}
+
+.featured-grid .movie-card:hover img {
+    transform: scale(1.1);
+}
+
+.featured-grid .movie-info {
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0 0 10px 10px;
+}
+
+.featured-grid .movie-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.featured-grid .movie-info p {
+    margin: 0.5em 0 0;
+    font-size: 0.9em;
+}
+
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 1em;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    nav .search-bar {
+        display: none;
+    }
+
+    nav .logo {
+        margin-right: auto;
+    }
+
+    nav ul.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero button {
+        font-size: 1em;
+    }
+
+    .featured {
+        padding: 1em;
+    }
+
+    .featured h2 {
+        font-size: 2em;
+    }
+}
